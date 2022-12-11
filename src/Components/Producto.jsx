@@ -1,90 +1,29 @@
 import React from "react";
 
+const productos = [
+    {id: 1, name:"Remera Oriana negra", price: 3650, imagen: "Images/RemeraNegra.jpeg"},
+    {id: 2, name:"Remera Oriana salmón", price: 3650, imagen: "Images/RemeraNaranja.jpeg"},
+    {id: 3, name:"Musculosa wanda azul", price: 1650, imagen: "Images/RemeraAzul.jpeg"},
+    {id: 4, name:"Mono Julieta rojo", price: 3990, imagen: "Images/MonoRojo.jpeg"},
+    {id: 5, name:"Vestido Catalina nude", price: 7000, imagen: "Images/VestidoNaranja.jpeg"},
+    {id: 5, name:"Vestido Melisa rojo", price: 4500, imagen: "Images/VestidoRojo.jpeg"}
+]
+
 const Producto = () => {
     return(
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h2 className="text-center p-3">Todos los productos</h2>
-                        <div className="row row-cols-1 row-cols-md-3 g-4 p-2">
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/RemeraNegra.jpeg" className="card-img-top" alt="Remera negra"/>
-                                <div className="card-body">
-                                    <h6 className="card-title text-center">Remera Oriana negra</h6>
-                                    <h4 className="card-text text-center">$3650,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                    
-                                </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/RemeraNaranja.jpeg" className="card-img-top" alt="Remera naranja"/>
-                                <div className="card-body">
-                                <h6 className="card-title text-center">Remera Oriana salmón</h6>
-                                    <h4 className="card-text text-center">$3650,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/RemeraAzul.jpeg" className="card-img-top" alt="Remera azul"/>
-                                <div className="card-body">
-                                <h6 className="card-title text-center">Musculosa wanda azul</h6>
-                                    <h4 className="card-text text-center">$1650,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/MonoRojo.jpeg" className="card-img-top" alt="Mono rojo"/>
-                                <div className="card-body">
-                                <h6 className="card-title text-center">Mono Julieta rojo</h6>
-                                    <h4 className="card-text text-center">$3990,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/VestidoNaranja.jpeg" className="card-img-top" alt="Vestido naranja"/>
-                                <div className="card-body">
-                                <h6 className="card-title text-center">Vestido Catalina nude</h6>
-                                    <h4 className="card-text text-center">$7000,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card h-100">
-                                <img src="Images/VestidoRojo.jpeg" className="card-img-top" alt="Vestido rojo"/>
-                                <div className="card-body">
-                                <h6 className="card-title text-center">Vestido Melisa rojo</h6>
-                                    <h4 className="card-text text-center">$4500,00</h4>
-                                    <div className="d-flex justify-content-around">
-                                    <button type="button" class="btn btn-outline-secondary">Comprar</button>                                    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
+        <div className="row">
+            <h1 className="text-center pb-3">Todos los productos</h1>
+            {productos.map(item =>
+            <div className="col-md-4 mb-3" hey={item.id}>
+                <div className="card text-center">
+                    <img src={item.imagen} className="img-fluid" alt={item.name}/>
+                    <div className="card-body">
+                        <h5 className="card-title">{item.name}</h5>
+                        <p className="card-text"><b>${item.price}</b></p>
                     </div>
                 </div>
             </div>
+            )}
         </div>
     );
 }

@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="container">
                     <nav className="row">
                         <div className="col-12 col-md-1 d-flex aling-items-center justify-content-center">
-                            <img src="./Images/Logo2.png" className="mx-2" alt="Logo" width={150} />
+                            <img src="/Images/Logo2.png" className="mx-2" alt="Logo" width={150} />
                         </div>
                         <ul className="col-12 col-md-3 list-unstyled pt-4">
                             <li className="text-center">Comunicate con nosotras</li>

@@ -14,7 +14,7 @@ const Producto = () => {
         <div className="row">
             <h1 className="text-center pb-3">Todos los productos</h1>
             {productos.map(item =>
-            <div className="col-md-4 mb-3" hey={item.id}>
+            <div className="col-md-3 mb-3" hey={item.id}>
                 <div className="card text-center">
                     <img src={item.imagen} className="img-fluid" alt={item.name}/>
                     <div className="card-body">

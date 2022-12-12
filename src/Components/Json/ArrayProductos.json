@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre":"Remera Antonella rosa", "precio": 2290, "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/999/070/products/88816434-86ac-4ee7-9b8b-c8aaea4a0a181-e0eed694093d2b4b0116669929033249-1024-1024.jpeg", "descripcion":"Remera tipo musculosa de morley escote en V. Largo: 40cm Ancho: 33cm" ,"stock": 10, "categoria": "Tops" },
+    {"id": 2, "nombre":"Remera Serena negra", "precio": 2390, "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/999/070/products/48556e68-cdfe-471d-8939-41691d1f94a11-25fae8137ce0ef1ddf16686435394135-1024-1024.jpeg", "descripcion":"Remera de modal basica combinada. Largo: 43cm ancho: 39cm" ,"stock": 7, "categoria": "Remeras" },
+    {"id": 3, "nombre":"Remera Antonella blanca", "precio": 4250, "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/999/070/products/f0d1a996-9c99-45d3-8b26-d148627ad029-3c0481e77e5931a8cc16651503388055-1024-1024.jpeg", "descripcion":"Remera tipo musculosa de bremer, escote recto, calidad premium 34cm de largo 35cm de ancho" ,"stock": 10, "categoria": "Vestidos" },
+    {"id": 4, "nombre":"Remera Ximena beige", "precio": 2990, "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/999/070/products/eb0af7ff-b236-4ac3-af44-6109d9c7dfea1-8c44da904d38a5695616680875683427-1024-1024.jpeg", "descripcion":"Musculosa de morley estampada. 45cm de largo 36cm de ancho" ,"stock": 14, "categoria": "Remeras" }
+    
+]

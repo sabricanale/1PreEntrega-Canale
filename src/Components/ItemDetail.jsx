@@ -3,12 +3,15 @@ import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => { 
     return(
-            <div className="row my-5">
-                <div className="col-md-4 offset-md-4 text-center">
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-4">
                     <img src={item.imagen} className="img-fluid" alt={item.nombre}/>
-                    <h1>{item.nombre}</h1>
+                </div>
+                <div className="col-md-4 text-center">
+                    <h2>{item.nombre}</h2>
+                    <h4><b>${item.precio}</b></h4>
                     <p>{item.descripcion}</p>
-                    <p><b>${item.precio}</b></p>
+                    <p className="fs-6 fw-light">Quedan <b>{item.stock}</b> productos disponibles </p>
                     <ItemCount stockItems={item.stock}/>
                 </div>    
             </div>        

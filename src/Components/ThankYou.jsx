@@ -9,7 +9,7 @@ const ThankYou = () =>{
                 <div className="col-md-12 text-center">
                     <div className="alert alert-secondary" role="alert">
                         <h1>¡Gracias por tu compra!</h1>
-                        <p>Yu número de compra es: <b>{id}</b></p>
+                        <p>Tu número de orden es: <b>{id}</b></p>
                     </div>
                     <Link to={"/"} className="btn">Ir a la tienda</Link>
                 </div>

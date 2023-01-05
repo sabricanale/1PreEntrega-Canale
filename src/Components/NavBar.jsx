@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget";
 const NavBar = () => {
     return (
         <div className="row">
-            <div className="col-md-6">
+            <div className= "col-md-5">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to={"/"}><img src={"/Images/LogoSinFondo.png"} alt="Cirenne tienda" width={100}/></Link>

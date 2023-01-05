@@ -1,26 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import ArrayProductos from "./Json/ArrayProductos.json"
+import {doc, getDoc, getFirestore} from "firebase/firestore"
+import Loading from "./Loading";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
+    const [loading, setLoading] = useState(true)
     const {id} = useParams()
-    
+
     useEffect(()=>{
-        const promesa = new Promise ((resolve) =>{
-            setTimeout(()=>{
-                resolve(ArrayProductos.find(item => item.id === parseInt(id)))
-            }, 2000)
+        const db = getFirestore()
+        const documento = doc(db, "Items", id)
+        getDoc(documento).then((snapShot)=>{
+            if(snapShot.exists()){
+                setItem({id:snapShot.id, ...snapShot.data()})
+                setLoading(false)
+            }
+            else{
+                console.log("Error! no se encontró el documento");
+            }            
         })
-        promesa.then((data) =>{
-            setItem(data)
-        })
-    },[id])
+    }, [id])
+    
     return(
         <div className="container">
-            <ItemDetail item={item} />
-            
+            {loading ? <Loading/> : <ItemDetail item={item} />}
         </div>
     )
 }
